@@ -1,0 +1,29 @@
+# Binaries for Java (class files)
+*.class
+
+# Backup files
+*.bak
+*.swp
+
+# IDEs and other development environments
+.idea/
+*.iml
+*.project
+*.classpath
+.settings/
+
+# Build directories
+/bin/
+/build/
+/out/
+
+# Maven
+target/
+
+# Gradle
+.gradle/
+build/
+
+# Logs
+*.log
+
