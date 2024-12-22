@@ -2,15 +2,16 @@
 import javafx.scene.canvas.GraphicsContext;
 
 /**
- * Zaklad pre itemy (klice, checkpointy, a pod.).
+ * Zaklad pre nebezpecne objekty (Enemy, Knife...).
+ * Maju update a draw, koliziu, atd.
  */
-public abstract class Item {
+public abstract class Hazard {
     protected double x;
     protected double y;
     protected double width;
     protected double height;
 
-    public Item(double x, double y, double width, double height) {
+    public Hazard(double x, double y, double width, double height) {
         this.x = x;
         this.y = y;
         this.width = width;
@@ -21,13 +22,6 @@ public abstract class Item {
         return (px < x + width && px + pw > x && py < y + height && py + ph > y);
     }
 
+    public abstract void update(Level level);
     public abstract void draw(GraphicsContext gc);
-
-    public double getX() {
-        return x;
-    }
-
-    public double getY() {
-        return y;
-    }
 }

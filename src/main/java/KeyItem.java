@@ -1,12 +1,16 @@
-import javafx.scene.image.Image;
-import javafx.scene.canvas.GraphicsContext;
 
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
+
+/**
+ * Klic - ked sa ho hrac dotkne, zvysi sa mu pocet klucov.
+ */
 public class KeyItem extends Item {
+
     private Image keyImage;
 
     public KeyItem(double x, double y) {
         super(x, y, 32, 32);
-        // nahrajte obrázok kľúča, musí byť v resources
         keyImage = new Image(getClass().getResourceAsStream("/key.png"));
     }
 
